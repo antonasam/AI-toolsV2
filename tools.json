@@ -285,6 +285,449 @@
       "mainCategory": "Operational Tool",
       "fiveWordDescription": "AI meeting transcription and insights",
       "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 31,
+      "companyName": "Notion AI",
+      "website": "https://www.notion.so/product/ai",
+      "description": "AI-powered team collaboration and document creation.",
+      "mainCategory": "Operational Tool",
+      "fiveWordDescription": "AI team collaboration and documentation",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 32,
+      "companyName": "Forecast",
+      "website": "https://forecast.app",
+      "description": "Project management with AI-based resource planning.",
+      "mainCategory": "Operational Tool",
+      "fiveWordDescription": "AI project and resource management",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 33,
+      "companyName": "Fireflies.ai",
+      "website": "https://fireflies.ai",
+      "description": "AI meeting notes and transcription.",
+      "mainCategory": "Operational Tool",
+      "vocapCompaniesUsing": "Vocap",
+      "fiveWordDescription": "AI meeting transcription and insights",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 34,
+      "companyName": "Jasper AI",
+      "website": "https://www.jasper.ai/",
+      "description": "AI copilot platform for enterprise marketing teams.",
+      "mainCategory": "Marketing",
+      "fiveWordDescription": "AI driven marketing automation tool",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 35,
+      "companyName": "Drift",
+      "website": "https://www.drift.com",
+      "description": "Conversational AI for lead nurturing.",
+      "mainCategory": "Marketing",
+      "fiveWordDescription": "Conversational AI for lead nurturing",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 36,
+      "companyName": "Amplitude",
+      "website": "https://amplitude.com/",
+      "description": "Product analytics company that provides a platform for businesses to understand user behavior and make data-driven decisions.",
+      "mainCategory": "Marketing",
+      "fiveWordDescription": "AI powered marketing analytics platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 37,
+      "companyName": "OfferFit",
+      "website": "https://www.offerfit.ai/",
+      "description": "Uses AI to personalize marketing campaigns, optimizing offers and content for individual users.",
+      "mainCategory": "Marketing",
+      "fiveWordDescription": "Personalized AI marketing campaign optimization",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 38,
+      "companyName": "Typeface",
+      "website": "https://www.typeface.ai/",
+      "description": "Builds generative AI tools for creating marketing copy, branding materials, and other creative content.",
+      "mainCategory": "Marketing",
+      "fiveWordDescription": "AI marketing copy and branding",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 39,
+      "companyName": "AdCreative",
+      "website": "https://www.adcreative.ai/",
+      "description": "AI-powered tools to generate ad creatives and texts that are focused on driving conversion rates for their customers.",
+      "mainCategory": "Marketing",
+      "fiveWordDescription": "AI generated marketing creative content",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 40,
+      "companyName": "OpenAI",
+      "website": "https://openai.com",
+      "description": "AI language model developed based on the GPT-4 architecture designed to generate human-like text based on the input it receives.",
+      "mainCategory": "LLM",
+      "fiveWordDescription": "Advanced large language model system",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 41,
+      "companyName": "Google Gemini",
+      "website": "https://gemini.google.com/",
+      "description": "LLM built with advanced reasoning and multimodal capabilities.",
+      "mainCategory": "LLM",
+      "fiveWordDescription": "Advanced reasoning multimodal AI model",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 42,
+      "companyName": "Anthropic",
+      "website": "https://claude.ai/",
+      "description": "AI assistants focused on safety and alignment, offering a more human-centric conversational style.",
+      "mainCategory": "LLM",
+      "vocapCompaniesUsing": "Vocap (Great for slide deck creation)",
+      "fiveWordDescription": "Safety focused conversational AI assistant",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 43,
+      "companyName": "LLaMA",
+      "website": "https://www.llama.com/",
+      "description": "Open-access models designed for research and practical applications, with versions such as LLaMA 2 optimized for efficiency and performance.",
+      "mainCategory": "LLM",
+      "fiveWordDescription": "Open source language model platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 44,
+      "companyName": "Cohere",
+      "website": "https://cohere.com/",
+      "description": "Models focused on retrieval-augmented generation (RAG) for enterprise applications.",
+      "mainCategory": "LLM",
+      "fiveWordDescription": "Retrieval augmented generation AI model",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 45,
+      "companyName": "Hugging Face",
+      "website": "https://huggingface.co/",
+      "description": "An open-source multilingual LLM designed by a collaborative global effort.",
+      "mainCategory": "LLM",
+      "fiveWordDescription": "Open source language model platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 46,
+      "companyName": "Langfuse",
+      "website": "https://langfuse.com",
+      "description": "Open-source LLM monitoring, tracing, and testing.",
+      "mainCategory": "LLM",
+      "fiveWordDescription": "LLM monitoring and performance tracking",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 47,
+      "companyName": "Langchain",
+      "website": "https://www.langchain.com",
+      "description": "LLM build framework for developing applications with language models.",
+      "mainCategory": "LLM",
+      "fiveWordDescription": "LLM application development framework tool",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 48,
+      "companyName": "Butler Labs",
+      "website": "https://www.eve.legal/",
+      "description": "Builds AI-powered solutions for legal teams, helping with contract analysis, drafting, and legal research.",
+      "mainCategory": "Legal",
+      "fiveWordDescription": "AI legal research and analysis",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 49,
+      "companyName": "ConverzAI",
+      "website": "https://www.converzai.com/",
+      "description": "Provides HR solutions that use AI to enhance recruitment, onboarding, and employee engagement processes.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "AI recruitment and employee engagement",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 50,
+      "companyName": "Sapia AI",
+      "website": "https://sapia.ai/",
+      "description": "AI-powered smart interviewing solutions for organizations to streamline their hiring process.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "AI powered interviewing and screening",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 51,
+      "companyName": "Deel",
+      "website": "https://www.deel.com/",
+      "description": "AI-powered global people platform that simplifies the way companies onboard, manage payroll, and ensure compliance for their global teams.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "Global AI workforce management platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 52,
+      "companyName": "Paradox",
+      "website": "https://www.paradox.ai/",
+      "description": "Conversational hiring software for automated recruitment.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "Conversational AI hiring software platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 53,
+      "companyName": "Gloat",
+      "website": "https://gloat.com/",
+      "description": "Workforce agility and talent marketplace platform.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "AI talent intelligence and marketplace",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 54,
+      "companyName": "Eightfold",
+      "website": "https://eightfold.ai/",
+      "description": "AI-powered talent intelligence platform.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "AI talent intelligence and marketplace",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 55,
+      "companyName": "Workable",
+      "website": "https://www.workable.com",
+      "description": "AI-driven candidate screening and recruitment management.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "AI powered interviewing and screening",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 56,
+      "companyName": "Humu",
+      "website": "https://www.humu.com",
+      "description": "AI for employee coaching and performance improvement.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "AI enhanced human resources tool",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 57,
+      "companyName": "Lever",
+      "website": "https://www.lever.co",
+      "description": "Recruitment and candidate management platform.",
+      "mainCategory": "HR",
+      "fiveWordDescription": "AI enhanced human resources tool",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 58,
+      "companyName": "Vizcom",
+      "website": "https://www.vizcom.ai/",
+      "description": "Offers generative AI tools for creative professionals, focusing on design automation and ideation.",
+      "mainCategory": "Marketing",
+      "fiveWordDescription": "AI powered creative design automation",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 59,
+      "companyName": "Aisera",
+      "website": "https://aisera.com/",
+      "description": "AI-driven customer support and service automation, improving customer interactions and resolution times.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "AI customer support ticket automation",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 60,
+      "companyName": "Pylon",
+      "website": "https://pylon.com/",
+      "description": "AI-based customer experience management to enhance service quality.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "AI customer experience management platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 61,
+      "companyName": "Sierra",
+      "website": "https://sierra.ai/",
+      "description": "AI tools to streamline and automate customer service operations.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "AI powered customer support platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 62,
+      "companyName": "Zendesk AI",
+      "website": "https://www.zendesk.com",
+      "description": "Ticket automation and sentiment analysis for customer support.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "AI customer support ticket automation",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 63,
+      "companyName": "Intercom",
+      "website": "https://www.intercom.com",
+      "description": "AI-powered chatbots for live customer support.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "Intelligent AI customer chat assistant",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 64,
+      "companyName": "Freshdesk",
+      "website": "https://freshdesk.com",
+      "description": "AI-driven customer query categorization and support automation.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "AI powered customer support platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 65,
+      "companyName": "Ada",
+      "website": "https://www.ada.cx",
+      "description": "Automated chat for customer interaction and support.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "Intelligent AI customer chat assistant",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 66,
+      "companyName": "Crisp",
+      "website": "https://crisp.chat",
+      "description": "AI-based multi-channel customer support platform.",
+      "mainCategory": "Customer Support",
+      "fiveWordDescription": "AI powered customer support platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 67,
+      "companyName": "Genspark",
+      "website": "https://genspark.ai",
+      "description": "Developed an advanced AI-powered search and information retrieval platform.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI powered workplace search platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 68,
+      "companyName": "Glean",
+      "website": "https://www.glean.com/",
+      "description": "AI-driven workplace search, helping teams find information quickly and improve productivity.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI powered workplace search platform",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 69,
+      "companyName": "Sana",
+      "website": "https://sana.ai/",
+      "description": "AI solutions for IT operations, focusing on automating and improving efficiency in enterprise systems.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI business intelligence and insights",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 70,
+      "companyName": "Omni",
+      "website": "https://getomni.ai/",
+      "description": "Develops generative AI solutions tailored to data science tasks, including data analysis and modeling.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI data visualization and analytics",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 71,
+      "companyName": "Tableau",
+      "website": "https://www.tableau.com",
+      "description": "AI-powered data visualization and business intelligence.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI data visualization and analytics",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 72,
+      "companyName": "Domo",
+      "website": "https://www.domo.com",
+      "description": "AI-driven data integration and predictive analytics platform.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI data visualization and analytics",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 73,
+      "companyName": "Sisense",
+      "website": "https://www.sisense.com",
+      "description": "Embedded AI for actionable business insights.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI business intelligence and insights",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 74,
+      "companyName": "Alteryx",
+      "website": "https://www.alteryx.com",
+      "description": "End-to-end data science and machine learning platform.",
+      "mainCategory": "Business Intelligence",
+      "fiveWordDescription": "AI data visualization and analytics",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 75,
+      "companyName": "Numeric",
+      "website": "https://www.numeric.io/",
+      "description": "Develops AI tools for automating financial reporting, budgeting, and analytics tasks.",
+      "mainCategory": "Accounting",
+      "fiveWordDescription": "AI financial reporting and analytics",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 76,
+      "companyName": "Xero",
+      "website": "https://www.xero.com",
+      "description": "AI for payroll and financial reporting automation.",
+      "mainCategory": "Accounting",
+      "fiveWordDescription": "AI expense and payroll automation",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 77,
+      "companyName": "Bill.com",
+      "website": "https://www.bill.com",
+      "description": "Streamlined accounts payable and receivable with AI-based automation.",
+      "mainCategory": "Accounting",
+      "fiveWordDescription": "AI powered accounting and finance",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 78,
+      "companyName": "Anaplan",
+      "website": "https://www.anaplan.com",
+      "description": "AI for financial forecasting and planning.",
+      "mainCategory": "Accounting",
+      "fiveWordDescription": "AI powered financial forecasting tool",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
+    },
+    {
+      "id": 79,
+      "companyName": "Trullion",
+      "website": "https://www.trullion.com",
+      "description": "AI for lease accounting and compliance automation.",
+      "mainCategory": "Accounting",
+      "fiveWordDescription": "AI lease accounting compliance tool",
+      "vocapCommentary": "This is a placeholder commentary. Ideally, we will go through each of this tools and provide a brief commentary of it's value as we forsee it. This is the vocap wisdom section where entreprenuers can derive value."
     }
   ]
 }
