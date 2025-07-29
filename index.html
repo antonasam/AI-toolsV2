@@ -897,6 +897,12 @@
 
         // Initialize
         loadTools();
+        
+        // Attach click handler to "All" category
+document.querySelector('.category-item[data-category=""]').addEventListener('click', () => {
+    filterByCategory('');
+});
+
     </script>
 </body>
 </html>
