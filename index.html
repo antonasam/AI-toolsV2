@@ -178,6 +178,14 @@
             font-size: 16px;
             flex-shrink: 0;
             background-color: #f1f5f9;
+            overflow: hidden;
+        }
+
+        .tool-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 6px;
         }
 
         .tool-name {
@@ -357,7 +365,7 @@
                 <div class="logo">
                     <img src="vocap-logo.png" alt="Vocap Partners" height="40">
                 </div>
-                <div style="flex: 1;"></div> <!-- Spacer -->
+                <div style="flex: 1;"></div>
             </div>
             
             <div class="title-section">
@@ -417,89 +425,6 @@
             'Legal': 'legal'
         };
 
-        // Enhanced tool icons mapping
-        const toolIcons = {
-            'Dust': '⚡',
-            'All Hands': '👥',
-            'Cursor': '🎯',
-            'Harness': '⚙️',
-            'Zed': '📝',
-            'Supermaven': '🚀',
-            'Continue': '🔄',
-            'Replit': '💻',
-            'Aider': '🤖',
-            'bolt.new': '⚡',
-            'Cognition': '🧠',
-            'loveable.dev': '💖',
-            'V0': '🎨',
-            'Roocode': '//',
-            'Cline': '🤖',
-            'Ducky': '🦆',
-            'Co.dev': '⚙️',
-            'Clay': '🎨',
-            'Unify': '🔗',
-            'Default': '📋',
-            'Sane Box': '📧',
-            'Cohesive': '🔗',
-            'Gamma': '📊',
-            'GitHub Copilot': '🐙',
-            'Sentry': '🛡️',
-            'Linear': '📐',
-            'Traffyk': '📡',
-            'Dreamwell AI': '💭',
-            'Brex': '💳',
-            'Gong.io': '🎤',
-            'Notion AI': '📝',
-            'Forecast': '📈',
-            'Fireflies.ai': '🪰',
-            'Jasper AI': '💎',
-            'Drift': '💬',
-            'Amplitude': '📊',
-            'OfferFit': '🎯',
-            'Typeface': '🎨',
-            'AdCreative': '🎨',
-            'OpenAI': '🤖',
-            'Google Gemini': '💎',
-            'Anthropic': '🔮',
-            'LLaMA': '🦙',
-            'Cohere': '🤝',
-            'Hugging Face': '🤗',
-            'Langfuse': '🔍',
-            'Langchain': '🔗',
-            'Butler Labs': '⚖️',
-            'ConverzAI': '👨‍💼',
-            'Sapia AI': '🤖',
-            'Deel': '🌍',
-            'Paradox': '❓',
-            'Gloat': '🎯',
-            'Eightfold': '8️⃣',
-            'Workable': '💼',
-            'Humu': '🎯',
-            'Lever': '⚡',
-            'Vizcom': '🎨',
-            'Aisera': '🤖',
-            'Pylon': '🏗️',
-            'Sierra': '🏔️',
-            'Zendesk AI': '🎫',
-            'Intercom': '💬',
-            'Freshdesk': '🌿',
-            'Ada': '🤖',
-            'Crisp': '💬',
-            'Genspark': '✨',
-            'Glean': '🔍',
-            'Sana': '📊',
-            'Omni': '🔮',
-            'Tableau': '📊',
-            'Domo': '📈',
-            'Sisense': '📊',
-            'Alteryx': '🔄',
-            'Numeric': '🔢',
-            'Xero': '📊',
-            'Bill.com': '💰',
-            'Anaplan': '📋',
-            'Trullion': '📋'
-        };
-
         // Load tools data from JSON
         async function loadTools() {
             try {
@@ -511,6 +436,8 @@
                     id: tool.id,
                     name: tool.companyName,
                     website: tool.website,
+                    logoUrl: tool.logoUrl,
+                    fallbackLogoUrl: tool.fallbackLogoUrl,
                     category: tool.mainCategory,
                     description: tool.description,
                     fiveWordDescription: tool.fiveWordDescription,
@@ -532,9 +459,24 @@
         // Sample data matching the design (fallback)
         function loadSampleData() {
             allTools = [
-                { name: "Dust", website: "https://dust.tt/", category: "Software Development", description: "Generative AI tools for software engineering", fiveWordDescription: "AI powered code generation tool" },
-                { name: "Glean", website: "https://www.glean.com/", category: "Business Intelligence", description: "AI-driven workplace search", fiveWordDescription: "AI powered workplace search platform" },
-                { name: "Clay", website: "https://www.clay.com/", category: "Sales", description: "AI-powered sales prospecting", fiveWordDescription: "AI powered sales outreach automation" }
+                { 
+                    name: "Dust", 
+                    website: "https://dust.tt/", 
+                    logoUrl: "https://logo.clearbit.com/dust.tt",
+                    fallbackLogoUrl: "https://favicone.com/dust.tt?s=128",
+                    category: "Software Development", 
+                    description: "Generative AI tools for software engineering", 
+                    fiveWordDescription: "AI powered code generation tool" 
+                },
+                { 
+                    name: "Glean", 
+                    website: "https://www.glean.com/", 
+                    logoUrl: "https://logo.clearbit.com/glean.com",
+                    fallbackLogoUrl: "https://favicone.com/glean.com?s=128",
+                    category: "Business Intelligence", 
+                    description: "AI-driven workplace search", 
+                    fiveWordDescription: "AI powered workplace search platform" 
+                }
             ];
             filteredTools = [...allTools];
             populateCategories();
@@ -641,14 +583,22 @@
             
             toolsGrid.innerHTML = filteredTools.map(tool => {
                 const categoryClass = categoryColors[tool.category] || 'default';
-                const icon = toolIcons[tool.name] || tool.name.charAt(0);
                 const cleanWebsite = cleanWebsiteUrl(tool.website);
                 const websiteUrl = getWebsiteUrl(tool.website);
+                
+                // Use logoUrl from JSON, with fallback
+                const logoUrl = tool.logoUrl || `https://logo.clearbit.com/${cleanWebsite}`;
+                const fallbackLogo = tool.fallbackLogoUrl || `https://favicone.com/${cleanWebsite}?s=128`;
                 
                 return `
                     <div class="tool-card">
                         <div class="tool-header">
-                            <div class="tool-icon">${icon}</div>
+                            <div class="tool-icon">
+                                <img src="${logoUrl}" 
+                                     onerror="this.src='${fallbackLogo}'; this.onerror=null;" 
+                                     alt="${tool.name} logo"
+                                     loading="lazy">
+                            </div>
                             <span class="tool-name">${tool.name}</span>
                             <a href="${websiteUrl}" target="_blank" class="external-link">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
