@@ -177,6 +177,7 @@
             justify-content: center;
             font-size: 16px;
             flex-shrink: 0;
+            background-color: #f1f5f9;
         }
 
         .tool-name {
@@ -205,12 +206,12 @@
             margin-bottom: 8px;
         }
 
-        .category-software-dev {
+        .category-software-development {
             background-color: #dbeafe;
             color: #1d4ed8;
         }
 
-        .category-bi-analytics {
+        .category-business-intelligence {
             background-color: #dcfce7;
             color: #16a34a;
         }
@@ -230,6 +231,41 @@
             color: #4338ca;
         }
 
+        .category-sales {
+            background-color: #f0fdf4;
+            color: #15803d;
+        }
+
+        .category-productivity {
+            background-color: #fdf4ff;
+            color: #a21caf;
+        }
+
+        .category-llm {
+            background-color: #fef2f2;
+            color: #dc2626;
+        }
+
+        .category-operational-tool {
+            background-color: #fffbeb;
+            color: #d97706;
+        }
+
+        .category-product {
+            background-color: #f0f9ff;
+            color: #0284c7;
+        }
+
+        .category-accounting {
+            background-color: #f7fee7;
+            color: #65a30d;
+        }
+
+        .category-legal {
+            background-color: #fafafa;
+            color: #525252;
+        }
+
         .category-default {
             background-color: #f1f5f9;
             color: #475569;
@@ -244,7 +280,26 @@
             color: #64748b;
             font-size: 14px;
             margin-top: 12px;
-            display: none; /* Hidden by default to match design */
+            line-height: 1.4;
+        }
+
+        .five-word-desc {
+            color: #3b82f6;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .vocap-using {
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 8px;
+            display: inline-block;
         }
 
         .no-results {
@@ -346,36 +401,123 @@
         let filteredTools = [];
         let activeCategory = '';
 
-        // Category color mapping
+        // Category color mapping - updated to match JSON structure
         const categoryColors = {
-            'Software Dev': 'software-dev',
-            'BI / Analytics': 'bi-analytics', 
+            'Software Development': 'software-development',
+            'Business Intelligence': 'business-intelligence', 
             'Customer Support': 'customer-support',
             'Marketing': 'marketing',
-            'HR': 'hr'
+            'HR': 'hr',
+            'Sales': 'sales',
+            'Productivity': 'productivity',
+            'LLM': 'llm',
+            'Operational Tool': 'operational-tool',
+            'Product': 'product',
+            'Accounting': 'accounting',
+            'Legal': 'legal'
         };
 
-        // Tool icons mapping (simple letters for now)
+        // Enhanced tool icons mapping
         const toolIcons = {
             'Dust': '⚡',
-            'Glean': '🔍',
-            'Sana': '📊',
             'All Hands': '👥',
             'Cursor': '🎯',
             'Harness': '⚙️',
+            'Zed': '📝',
+            'Supermaven': '🚀',
+            'Continue': '🔄',
+            'Replit': '💻',
+            'Aider': '🤖',
+            'bolt.new': '⚡',
+            'Cognition': '🧠',
+            'loveable.dev': '💖',
+            'V0': '🎨',
+            'Roocode': '//',
+            'Cline': '🤖',
+            'Ducky': '🦆',
+            'Co.dev': '⚙️',
+            'Clay': '🎨',
+            'Unify': '🔗',
+            'Default': '📋',
+            'Sane Box': '📧',
+            'Cohesive': '🔗',
+            'Gamma': '📊',
+            'GitHub Copilot': '🐙',
+            'Sentry': '🛡️',
+            'Linear': '📐',
+            'Traffyk': '📡',
+            'Dreamwell AI': '💭',
+            'Brex': '💳',
+            'Gong.io': '🎤',
+            'Notion AI': '📝',
+            'Forecast': '📈',
+            'Fireflies.ai': '🪰',
+            'Jasper AI': '💎',
+            'Drift': '💬',
+            'Amplitude': '📊',
+            'OfferFit': '🎯',
+            'Typeface': '🎨',
+            'AdCreative': '🎨',
+            'OpenAI': '🤖',
+            'Google Gemini': '💎',
+            'Anthropic': '🔮',
+            'LLaMA': '🦙',
+            'Cohere': '🤝',
+            'Hugging Face': '🤗',
+            'Langfuse': '🔍',
+            'Langchain': '🔗',
+            'Butler Labs': '⚖️',
+            'ConverzAI': '👨‍💼',
+            'Sapia AI': '🤖',
+            'Deel': '🌍',
+            'Paradox': '❓',
+            'Gloat': '🎯',
+            'Eightfold': '8️⃣',
+            'Workable': '💼',
+            'Humu': '🎯',
+            'Lever': '⚡',
+            'Vizcom': '🎨',
             'Aisera': '🤖',
             'Pylon': '🏗️',
             'Sierra': '🏔️',
-            'Clay': '🎨',
-            'Unify': '🔗',
-            'Data Science': '📈'
+            'Zendesk AI': '🎫',
+            'Intercom': '💬',
+            'Freshdesk': '🌿',
+            'Ada': '🤖',
+            'Crisp': '💬',
+            'Genspark': '✨',
+            'Glean': '🔍',
+            'Sana': '📊',
+            'Omni': '🔮',
+            'Tableau': '📊',
+            'Domo': '📈',
+            'Sisense': '📊',
+            'Alteryx': '🔄',
+            'Numeric': '🔢',
+            'Xero': '📊',
+            'Bill.com': '💰',
+            'Anaplan': '📋',
+            'Trullion': '📋'
         };
 
-        // Load tools data
+        // Load tools data from JSON
         async function loadTools() {
             try {
                 const response = await fetch('tools.json');
-                allTools = await response.json();
+                const data = await response.json();
+                
+                // Extract tools from the JSON structure
+                allTools = data.tools.map(tool => ({
+                    id: tool.id,
+                    name: tool.companyName,
+                    website: tool.website,
+                    category: tool.mainCategory,
+                    description: tool.description,
+                    fiveWordDescription: tool.fiveWordDescription,
+                    vocapCompaniesUsing: tool.vocapCompaniesUsing,
+                    vocapCommentary: tool.vocapCommentary
+                }));
+                
                 filteredTools = [...allTools];
                 
                 populateCategories();
@@ -387,21 +529,12 @@
             }
         }
 
-        // Sample data matching the design
+        // Sample data matching the design (fallback)
         function loadSampleData() {
             allTools = [
-                { name: "Dust", website: "dust.tt", category: "Software Dev", description: "Generative AI tools for software engineering" },
-                { name: "Glean", website: "www.glean.com", category: "BI / Analytics", description: "AI-driven workplace search" },
-                { name: "Sana", website: "sana.ai", category: "BI / Analytics", description: "AI solutions for IT operations" },
-                { name: "All Hands", website: "www.all-hands.dev", category: "Software Dev", description: "AI tools for managing product updates" },
-                { name: "Cursor / Anysphere", website: "www.cursor.com", category: "Software Dev", description: "AI-powered code editor" },
-                { name: "Harness", website: "www.harness.io", category: "Software Dev", description: "DevOps platform with AI capabilities" },
-                { name: "Aisera", website: "aisera.com", category: "Customer Support", description: "AI-powered service desk" },
-                { name: "Pylon", website: "pylon.com", category: "Customer Support", description: "Customer support automation" },
-                { name: "Sierra", website: "sierra.ai", category: "Customer Support", description: "Conversational AI platform" },
-                { name: "Clay", website: "clay.com", category: "Marketing", description: "AI-powered sales prospecting" },
-                { name: "Unify", website: "unify.com", category: "HR", description: "AI recruiting platform" },
-                { name: "Data Science", website: "datascience.com", category: "BI / Analytics", description: "Data science platform" }
+                { name: "Dust", website: "https://dust.tt/", category: "Software Development", description: "Generative AI tools for software engineering", fiveWordDescription: "AI powered code generation tool" },
+                { name: "Glean", website: "https://www.glean.com/", category: "Business Intelligence", description: "AI-driven workplace search", fiveWordDescription: "AI powered workplace search platform" },
+                { name: "Clay", website: "https://www.clay.com/", category: "Sales", description: "AI-powered sales prospecting", fiveWordDescription: "AI powered sales outreach automation" }
             ];
             filteredTools = [...allTools];
             populateCategories();
@@ -466,7 +599,8 @@
                     tool.name.toLowerCase().includes(searchTerm) ||
                     (tool.description && tool.description.toLowerCase().includes(searchTerm)) ||
                     (tool.category && tool.category.toLowerCase().includes(searchTerm)) ||
-                    (tool.website && tool.website.toLowerCase().includes(searchTerm));
+                    (tool.website && tool.website.toLowerCase().includes(searchTerm)) ||
+                    (tool.fiveWordDescription && tool.fiveWordDescription.toLowerCase().includes(searchTerm));
                 
                 const matchesCategory = !activeCategory || tool.category === activeCategory;
                 
@@ -474,6 +608,21 @@
             });
             
             renderTools();
+        }
+
+        // Clean website URL for display
+        function cleanWebsiteUrl(url) {
+            if (!url) return '';
+            return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+        }
+
+        // Get proper website URL for linking
+        function getWebsiteUrl(url) {
+            if (!url) return '#';
+            if (url.startsWith('http://') || url.startsWith('https://')) {
+                return url;
+            }
+            return 'https://' + url;
         }
 
         // Render tools grid
@@ -493,13 +642,15 @@
             toolsGrid.innerHTML = filteredTools.map(tool => {
                 const categoryClass = categoryColors[tool.category] || 'default';
                 const icon = toolIcons[tool.name] || tool.name.charAt(0);
+                const cleanWebsite = cleanWebsiteUrl(tool.website);
+                const websiteUrl = getWebsiteUrl(tool.website);
                 
                 return `
                     <div class="tool-card">
                         <div class="tool-header">
                             <div class="tool-icon">${icon}</div>
                             <span class="tool-name">${tool.name}</span>
-                            <a href="https://${tool.website}" target="_blank" class="external-link">
+                            <a href="${websiteUrl}" target="_blank" class="external-link">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
@@ -508,7 +659,9 @@
                             </a>
                         </div>
                         <div class="tool-category category-${categoryClass}">${tool.category || 'Other'}</div>
-                        <div class="tool-website">${tool.website}</div>
+                        <div class="tool-website">${cleanWebsite}</div>
+                        ${tool.fiveWordDescription ? `<div class="five-word-desc">${tool.fiveWordDescription}</div>` : ''}
+                        ${tool.vocapCompaniesUsing ? `<div class="vocap-using">Used by: ${tool.vocapCompaniesUsing}</div>` : ''}
                         ${tool.description ? `<div class="tool-description">${tool.description}</div>` : ''}
                     </div>
                 `;
