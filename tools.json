@@ -1,0 +1,37 @@
+// Convert your CSV data to this JSON format - save as 'tools.json'
+[
+  {
+    "name": "Dust",
+    "status": "New",
+    "website": "https://dust.tt/",
+    "category": "Software Dev",
+    "description": "Generative AI tools for software engineering, streamlining workflows and code generation for developers.",
+    "source": "Menlo",
+    "vocapCompanies": null,
+    "pricing": "PRO - $29/month/user, excl. tax. ENTERPRISE - custom pay-per-use, 100+ users",
+    "amountRaised": "$21.50M"
+  },
+  {
+    "name": "Glean",
+    "status": "New", 
+    "website": "https://www.glean.com/",
+    "category": "BI / Analytics",
+    "description": "AI-driven workplace search, helping teams find information quickly and improve productivity.",
+    "source": "Menlo",
+    "vocapCompanies": null,
+    "pricing": "BASIC $295 per month, PRO - custom pricing",
+    "amountRaised": "$615.30M"
+  },
+  {
+    "name": "Sana",
+    "status": "New",
+    "website": "https://sana.ai/", 
+    "category": "BI / Analytics",
+    "description": "AI solutions for IT operations, focusing on automating and improving efficiency in enterprise systems.",
+    "source": "Menlo",
+    "vocapCompanies": null,
+    "pricing": "FREE - €0 Up to 5 seats, TEAM - €30/month/member/annually, ENTERPRISE - custom pricing",
+    "amountRaised": "$139.95M"
+  }
+  // ... continue with all 82 tools from your CSV
+]
