@@ -501,6 +501,32 @@
             color: #20566F;
         }
 
+        /* Top-right nav tabs */
+        .top-nav {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .top-nav a {
+            padding: 8px 14px;
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            background: white;
+            color: #21435B;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+        .top-nav a:hover {
+            background: #E8E8E8;
+        }
+        .top-nav a.active {
+            background: #20566F;
+            color: white;
+            border-color: #20566F;
+        }
+
         @media (max-width: 1024px) {
             .main-content {
                 grid-template-columns: 1fr;
@@ -551,6 +577,10 @@
                     <img src="VocapLogoClear.png" alt="Vocap Partners" height="50">
                 </div>
                 <div style="flex: 1;"></div>
+                <nav class="top-nav">
+                    <a href="index.html" class="active">AI Tools</a>
+                    <a href="call-prep.html">Call Prep</a>
+                </nav>
             </div>
             
             <div class="title-section">
