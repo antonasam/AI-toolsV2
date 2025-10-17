@@ -156,6 +156,65 @@
             background: #d1d1d1;
         }
 
+        /* Clear field grouping and success modal */
+        .fieldset {
+            border: 2px solid #E8E8E8;
+            border-radius: 10px;
+            padding: 14px;
+            margin: 12px 0 16px 0;
+            background: #FFFFFF;
+        }
+        .fieldset legend {
+            padding: 0 6px;
+            color: #20566F;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .field-hint {
+            color: #64748b;
+            font-size: 12px;
+            margin: 6px 0 10px 0;
+        }
+
+        .success-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .success-overlay.active {
+            display: flex;
+        }
+        .success-modal {
+            background: #ffffff;
+            border-radius: 14px;
+            border: 2px solid #E8E8E8;
+            max-width: 520px;
+            width: 92%;
+            padding: 18px;
+            color: #334155;
+        }
+        .success-title {
+            color: #20566F;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .success-body {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .success-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px;
+            justify-content: flex-end;
+        }
+
         @media (max-width: 768px) {
             .title {
                 font-size: 2rem;
@@ -201,9 +260,9 @@
         <main>
             <section>
                 <div class="call-prep-card">
-                    <h2 style="color:#20566F; font-size:1.25rem; font-weight:600; margin-bottom:14px;">Submit Briefing Details</h2>
+                    <h2 style="color:#20566F; font-size:1.25rem; font-weight:600; margin-bottom:10px;">Submit Briefing Details</h2>
                     <p class="small-note" style="margin-bottom:16px;">
-                        Enter your email and the target’s details. We’ll send this to our system to generate a briefing.
+                        Get a concise background briefing on your meeting contact and their company so you’re prepared with context, talking points, and recent highlights.
                     </p>
 
                     <form id="callPrepForm" autocomplete="on" novalidate>
@@ -214,32 +273,53 @@
                             <input type="email" id="cpEmail" name="email" placeholder="you@company.com" required>
                         </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="cpName">Target Name</label>
-                                <input type="text" id="cpName" name="target_name" placeholder="Jane Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="cpCompany">Target Company</label>
-                                <input type="text" id="cpCompany" name="target_company" placeholder="Acme Inc." required>
-                            </div>
-                        </div>
+                        <fieldset class="fieldset">
+                            <legend>About the person you’re meeting</legend>
+                            <p class="field-hint">These details help us research the person and provide company context for your prep.</p>
 
-                        <div class="form-group">
-                            <label for="cpLinkedIn">LinkedIn URL</label>
-                            <input type="url" id="cpLinkedIn" name="target_linkedin" placeholder="https://www.linkedin.com/in/..." required>
-                        </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cpName">Person’s full name</label>
+                                    <input type="text" id="cpName" name="target_name" placeholder="Jane Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpCompany">Person’s company</label>
+                                    <input type="text" id="cpCompany" name="target_company" placeholder="Acme Inc." required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpLinkedIn">Person’s LinkedIn profile URL</label>
+                                <input type="url" id="cpLinkedIn" name="target_linkedin" placeholder="https://www.linkedin.com/in/jane-doe/" required>
+                            </div>
+                        </fieldset>
 
                         <div class="form-actions">
-                            <button type="submit" class="btn-primary" id="cpSubmit">Submit</button>
+                            <button type="submit" class="btn-primary" id="cpSubmit">Get Briefing</button>
                             <button type="button" class="btn-secondary" id="cpClear">Clear</button>
                         </div>
 
-                        <div id="cpStatus" class="small-note"></div>
+                        <div id="cpStatus" class="small-note" aria-live="polite"></div>
+
+                        <p class="small-note" style="margin-top: 12px;">
+                            We use only publicly available sources. No scraping behind logins. We don’t store your credentials.
+                        </p>
                     </form>
                 </div>
             </section>
         </main>
+    </div>
+
+    <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+        <div class="success-modal">
+            <div class="success-title" id="successTitle">Briefing request received</div>
+            <div class="success-body" id="successBody">
+                Thanks—your call prep briefing is on the way. You’ll receive it at your email in a few minutes.
+            </div>
+            <div class="success-actions">
+                <button class="btn-secondary" id="successClose">OK, got it</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -266,7 +346,6 @@
             cpStatus.textContent = '';
 
             const formData = new FormData(cpForm);
-            // Honeypot
             if ((formData.get('website') || '').trim() !== '') {
                 cpStatus.textContent = 'Submission blocked.';
                 return;
@@ -300,8 +379,9 @@
                 });
 
                 if (res.ok) {
-                    cpStatus.textContent = 'Submitted. You can close this tab.';
                     cpForm.reset();
+                    cpStatus.textContent = '';
+                    openSuccessModal(payload.email, payload.target_name);
                 } else {
                     cpStatus.textContent = 'Submitted (non-200). If you see issues, we’ll check the webhook.';
                 }
@@ -309,8 +389,33 @@
                 cpStatus.textContent = 'Network or CORS error while submitting. Please try again later.';
             } finally {
                 cpSubmit.disabled = false;
-                cpSubmit.textContent = 'Submit';
+                cpSubmit.textContent = 'Get Briefing';
             }
+        });
+
+        function openSuccessModal(email, name) {
+            const overlay = document.getElementById('successOverlay');
+            const body = document.getElementById('successBody');
+
+            const who = name && name.trim() ? (' for ' + name.trim()) : '';
+            body.textContent = 'Thanks—your call prep briefing' + who + ' is on the way. You’ll receive it at ' + email + ' in a few minutes.';
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSuccessModal() {
+            const overlay = document.getElementById('successOverlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSuccessModal();
+        });
+
+        document.getElementById('successClose').addEventListener('click', closeSuccessModal);
+        document.getElementById('successOverlay').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeSuccessModal();
         });
     </script>
 </body>
